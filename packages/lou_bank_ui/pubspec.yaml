@@ -1,0 +1,27 @@
+name: lou_bank_ui
+description: A new Flutter package project.
+version: 0.0.1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  very_good_analysis: ^2.1.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+include: package:very_good_analysis/analysis_options.yaml
+
+flutter:
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto-Thin.ttf
