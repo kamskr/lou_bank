@@ -39,17 +39,19 @@ class LouButton extends StatelessWidget {
                 gradient: const LinearGradient(
                   colors: [
                     LouColors.gradientYellowStart,
-                    LouColors.gradientYellowEnd
+                    LouColors.gradientYellowEnd,
                   ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
                 ),
                 borderRadius: BorderRadius.circular(38),
               ),
               child: Container(
-                child: Text(text),
                 padding: const EdgeInsets.symmetric(vertical: 13),
                 margin: const EdgeInsets.all(0),
                 width: double.infinity,
                 alignment: Alignment.center,
+                child: Text(text),
               ),
             ),
           )
