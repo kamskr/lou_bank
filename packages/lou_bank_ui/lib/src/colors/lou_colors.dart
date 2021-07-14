@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 abstract class LouColors {
   static const white = Colors.white;
+  static const black = Colors.black;
+  static const transparent = Colors.transparent;
   static const yellow = Color(0xffF2FE8D);
   static const mint = Color(0xffB2D0CE);
   static const lilac = Color(0xffAA9EB7);
   static const grey1 = Color(0xff1E2121);
   static const grey2 = Color(0xff212121);
-  static const grey3 = Color(0xff79767D);
+  static const grey3 = Color(0xff363339);
   static const gradientMintStart = Color(0xffEAEAEA);
   static const gradientMintEnd = Color(0xffB2D0CE);
   static const gradientYellowStart = Color(0xffFCFFDF);

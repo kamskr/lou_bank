@@ -8,6 +8,7 @@ class ListScreen extends StatelessWidget {
   static const Map<String, Widget> _tileTitles = {
     'Colors': ColorScreen(),
     'Typography': TypographyScreen(),
+    'Widgets': WidgetsScreen(),
   };
 
   @override
