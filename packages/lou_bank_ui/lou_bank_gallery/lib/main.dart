@@ -15,7 +15,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Gallery')),
+        appBar: AppBar(
+          title: const Text(
+            'Gallery',
+          ),
+        ),
         body: const ListScreen(),
       ),
     );

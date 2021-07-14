@@ -17,7 +17,10 @@ class ListScreen extends StatelessWidget {
               .map(
                 (entry) => ListTile(
                   onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => entry.value)),
+                    MaterialPageRoute(
+                      builder: (context) => entry.value,
+                    ),
+                  ),
                   title: Text(entry.key),
                 ),
               )

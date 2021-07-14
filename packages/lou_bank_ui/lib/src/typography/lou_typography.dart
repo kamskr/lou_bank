@@ -7,14 +7,13 @@ abstract class LouTypography {
       package: 'lou_bank_ui',
       fontFamily: 'Roboto');
 
-  static final TextStyle headline1 =
-      _baseTextStyle.copyWith(fontSize: 25, fontWeight: LouFontWeight.bold);
-
-  static final TextStyle headline2 =
-      _baseTextStyle.copyWith(fontSize: 25, fontWeight: LouFontWeight.bold);
+  static final TextStyle headline1 = _baseTextStyle.copyWith(
+    fontSize: 25,
+    fontWeight: LouFontWeight.bold,
+  );
 }
 
 abstract class LouFontWeight {
-  static const FontWeight medium = FontWeight.w500;
-  static const FontWeight bold = FontWeight.bold;
+  static const FontWeight medium = FontWeight.w400;
+  static const FontWeight bold = FontWeight.w700;
 }
