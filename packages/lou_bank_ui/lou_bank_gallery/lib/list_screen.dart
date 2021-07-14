@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'theme/color_screen.dart';
+import 'theme/theme.dart';
 
 class ListScreen extends StatelessWidget {
   const ListScreen({Key? key}) : super(key: key);
 
   static const Map<String, Widget> _tileTitles = {
     'Colors': ColorScreen(),
+    'Typography': TypographyScreen(),
   };
 
   @override
