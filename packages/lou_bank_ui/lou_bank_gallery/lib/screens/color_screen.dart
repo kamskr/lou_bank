@@ -8,59 +8,63 @@ class ColorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Colors')),
-      body: ListView(children: <Widget>[
+      body: ListView(children: const <Widget>[
         ColorDisplay(
           title: 'white = Colors.white',
           decoration: BoxDecoration(
             color: LouColors.white,
-            border: Border.all(color: Colors.black),
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'yellow = Color(0xffF2FE8D)',
           decoration: BoxDecoration(
             color: LouColors.yellow,
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'mint = Color(0xffB2D0CE)',
           decoration: BoxDecoration(
             color: LouColors.mint,
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'lilac = Color(0xffAA9EB7)',
           decoration: BoxDecoration(
             color: LouColors.lilac,
           ),
         ),
         ColorDisplay(
-          title: 'grey1 = Color(0xff252525) + Color(0xff2C2C2C)',
+          title: 'grey1 = Color(0xff1E2121)',
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-            gradient: const LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                LouColors.grey1Start,
-                LouColors.grey1End,
-              ],
-            ),
+            color: LouColors.grey1,
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'grey2 = Color(0xff212121)',
           decoration: BoxDecoration(
             color: LouColors.grey2,
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'grey3 = Color(0xff79767D)',
           decoration: BoxDecoration(
             color: LouColors.grey3,
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
+          title: 'grey1 = Color(0xff252525) + Color(0xff2C2C2C)',
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                LouColors.gradientGreyStart,
+                LouColors.gradientGreyEnd,
+              ],
+            ),
+          ),
+        ),
+        ColorDisplay(
           title: 'mint gradient = Color(0xffEAEAEA) + Color(0xffB2D0CE)',
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -73,7 +77,7 @@ class ColorScreen extends StatelessWidget {
             ),
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'yellow gradient = Color(0xffFCFFDF) + Color(0xffF1FE87)',
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -86,7 +90,7 @@ class ColorScreen extends StatelessWidget {
             ),
           ),
         ),
-        const ColorDisplay(
+        ColorDisplay(
           title: 'lilac gradient = Color(0xffF2EFF4) + Color(0xffB8A9C6)',
           decoration: BoxDecoration(
             gradient: LinearGradient(
