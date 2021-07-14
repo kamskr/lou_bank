@@ -21,7 +21,7 @@ class WidgetsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: <Widget>[
