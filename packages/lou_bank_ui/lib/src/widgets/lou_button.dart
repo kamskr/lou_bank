@@ -48,7 +48,7 @@ class LouButton extends StatelessWidget {
               ),
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 13),
-                margin: const EdgeInsets.all(0),
+                margin: EdgeInsets.zero,
                 width: double.infinity,
                 alignment: Alignment.center,
                 child: Text(text),
@@ -68,7 +68,7 @@ class LouButton extends StatelessWidget {
             onPressed: onPressed,
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 13),
-              margin: const EdgeInsets.all(0),
+              margin: EdgeInsets.zero,
               width: double.infinity,
               alignment: Alignment.center,
               child: Text(text),
