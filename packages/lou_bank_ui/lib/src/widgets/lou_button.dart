@@ -15,6 +15,8 @@ class LouButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _ButtonWrapper(
+      primary: LouColors.grey3,
+      onPrimary: LouColors.white,
       onPressed: onPressed,
       child: _ButtonContent(text: text),
     );
@@ -34,6 +36,8 @@ class LouGradientButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _ButtonWrapper(
+      primary: LouColors.transparent,
+      onPrimary: LouColors.black,
       onPressed: onPressed,
       child: Ink(
         decoration: BoxDecoration(
@@ -54,9 +58,16 @@ class LouGradientButton extends StatelessWidget {
 }
 
 class _ButtonWrapper extends StatelessWidget {
-  const _ButtonWrapper({Key? key, required this.onPressed, required this.child})
+  const _ButtonWrapper(
+      {Key? key,
+      required this.primary,
+      required this.onPrimary,
+      required this.onPressed,
+      required this.child})
       : super(key: key);
 
+  final Color primary;
+  final Color onPrimary;
   final VoidCallback onPressed;
   final Widget child;
 
@@ -64,8 +75,8 @@ class _ButtonWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: LouColors.transparent,
-        onPrimary: LouColors.black,
+        primary: primary,
+        onPrimary: onPrimary,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(38),
@@ -80,18 +91,30 @@ class _ButtonWrapper extends StatelessWidget {
 }
 
 class _ButtonContent extends StatelessWidget {
-  const _ButtonContent({Key? key, required this.text}) : super(key: key);
+  const _ButtonContent({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
 
   final String text;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
       padding: const EdgeInsets.symmetric(vertical: 13),
-      margin: EdgeInsets.zero,
-      width: double.infinity,
-      alignment: Alignment.center,
-      child: Text(text),
+      child: Align(
+        alignment: Alignment.center,
+        child: SizedBox(
+          width: double.infinity,
+          child: Text(text),
+        ),
+      ),
     );
   }
 }
+
+// return Container(
+//       padding: const EdgeInsets.symmetric(vertical: 13),
+//       margin: EdgeInsets.zero,
+//       child: Text(text),
+//     );

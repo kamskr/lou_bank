@@ -25,13 +25,13 @@ class WidgetsScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: <Widget>[
-                  LouButton(
-                    text: 'Next',
+                  LouGradientButton(
+                    text: 'Become a client of the bank',
                     onPressed: () => {},
                   ),
                   const SizedBox(height: 30),
-                  LouGradientButton(
-                    text: 'Become a client of the bank',
+                  LouButton(
+                    text: 'Next',
                     onPressed: () => {},
                   ),
                 ],
