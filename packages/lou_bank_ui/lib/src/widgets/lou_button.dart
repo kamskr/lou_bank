@@ -102,10 +102,10 @@ class _ButtonContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 13),
-      child: Align(
-        alignment: Alignment.center,
-        child: SizedBox(
-          width: double.infinity,
+      child: SizedBox(
+        width: double.infinity,
+        child: Align(
+          alignment: Alignment.center,
           child: Text(text),
         ),
       ),
