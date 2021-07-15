@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:lou_bank_ui/lou_bank_ui.dart';
+
 abstract class LouTypography {
   static const _baseTextStyle = TextStyle(
-      fontWeight: LouFontWeight.medium,
-      height: 1.25,
-      package: 'lou_bank_ui',
-      fontFamily: 'Roboto');
+    fontWeight: LouFontWeight.medium,
+    height: 1.25,
+    package: 'lou_bank_ui',
+    fontFamily: 'Roboto',
+    color: LouColors.white,
+  );
 
   /// Headlines
   static final TextStyle headlineBold = _baseTextStyle.copyWith(
