@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../lou_bank_ui.dart';
+import 'package:lou_bank_ui/lou_bank_ui.dart';
 
 enum LouButtonVariant {
   darkGrey,
