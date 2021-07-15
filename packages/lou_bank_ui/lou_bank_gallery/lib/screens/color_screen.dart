@@ -10,9 +10,21 @@ class ColorScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Colors')),
       body: ListView(children: const <Widget>[
         ColorDisplay(
+          title: 'transparent = Colors.transparent',
+          decoration: BoxDecoration(
+            color: LouColors.transparent,
+          ),
+        ),
+        ColorDisplay(
           title: 'white = Colors.white',
           decoration: BoxDecoration(
             color: LouColors.white,
+          ),
+        ),
+        ColorDisplay(
+          title: 'white = Colors.black',
+          decoration: BoxDecoration(
+            color: LouColors.black,
           ),
         ),
         ColorDisplay(
