@@ -26,12 +26,12 @@ class WidgetsScreen extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   LouGradientButton(
-                    text: 'Become a client of the bank',
+                    text: 'Log in',
                     onPressed: () => {},
                   ),
                   const SizedBox(height: 30),
                   LouButton(
-                    text: 'Next',
+                    text: 'Become a client of the bank',
                     onPressed: () => {},
                   ),
                 ],
