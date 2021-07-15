@@ -27,13 +27,11 @@ class WidgetsScreen extends StatelessWidget {
                 children: <Widget>[
                   LouButton(
                     text: 'Next',
-                    variant: LouButtonVariant.yellow,
                     onPressed: () => {},
                   ),
                   const SizedBox(height: 30),
-                  LouButton(
+                  LouGradientButton(
                     text: 'Become a client of the bank',
-                    variant: LouButtonVariant.darkGrey,
                     onPressed: () => {},
                   ),
                 ],
