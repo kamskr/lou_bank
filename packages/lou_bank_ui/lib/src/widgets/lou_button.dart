@@ -14,24 +14,9 @@ class LouButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: LouColors.grey3,
-        onPrimary: LouColors.white,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(38),
-          ),
-        ),
-      ),
+    return _ButtonWrapper(
       onPressed: onPressed,
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 13),
-        margin: EdgeInsets.zero,
-        width: double.infinity,
-        alignment: Alignment.center,
-        child: Text(text),
-      ),
+      child: _ButtonContent(text: text),
     );
   }
 }
@@ -48,17 +33,7 @@ class LouGradientButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: LouColors.transparent,
-        onPrimary: LouColors.black,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(38),
-          ),
-        ),
-        padding: EdgeInsets.zero,
-      ),
+    return _ButtonWrapper(
       onPressed: onPressed,
       child: Ink(
         decoration: BoxDecoration(
@@ -72,14 +47,51 @@ class LouGradientButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(38),
         ),
-        child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 13),
-          margin: EdgeInsets.zero,
-          width: double.infinity,
-          alignment: Alignment.center,
-          child: Text(text),
-        ),
+        child: _ButtonContent(text: text),
       ),
+    );
+  }
+}
+
+class _ButtonWrapper extends StatelessWidget {
+  const _ButtonWrapper({Key? key, required this.onPressed, required this.child})
+      : super(key: key);
+
+  final VoidCallback onPressed;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: LouColors.transparent,
+        onPrimary: LouColors.black,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(38),
+          ),
+        ),
+        padding: EdgeInsets.zero,
+      ),
+      onPressed: onPressed,
+      child: child,
+    );
+  }
+}
+
+class _ButtonContent extends StatelessWidget {
+  const _ButtonContent({Key? key, required this.text}) : super(key: key);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 13),
+      margin: EdgeInsets.zero,
+      width: double.infinity,
+      alignment: Alignment.center,
+      child: Text(text),
     );
   }
 }
